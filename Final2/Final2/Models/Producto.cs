@@ -13,11 +13,11 @@ namespace Final2.Models
 
         
     }
-    public class ProductoProveedor
-    {
-        public int ProductoId { get; set; }
-        public int ProveedorId { get; set; }
-        public Producto Producto { get; set; }
-        public Proveedor Proveedor { get; set; }
-    }
+    //public class ProductoProveedor
+    //{
+    //    public int ProductoId { get; set; }
+    //    public int ProveedorId { get; set; }
+    //    public Producto Producto { get; set; }
+    //    public Proveedor Proveedor { get; set; }
+    //}
 }

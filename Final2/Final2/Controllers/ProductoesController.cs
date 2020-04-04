@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Final2.Models;
+using Rotativa;
 
 namespace Final2.Controllers
 {
@@ -18,6 +19,11 @@ namespace Final2.Controllers
         public ActionResult Index()
         {
             return View(db.Productoes.ToList());
+        }
+        public ActionResult Imprimir()
+        {
+            var print = new ActionAsPdf("Index");
+            return print;
         }
 
         // GET: Productoes/Details/5
