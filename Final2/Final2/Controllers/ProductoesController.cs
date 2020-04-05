@@ -9,22 +9,38 @@ using System.Web.Mvc;
 using Final2.Models;
 using Rotativa;
 
+
 namespace Final2.Controllers
 {
     public class ProductoesController : Controller
     {
         private FinalContext db = new FinalContext();
+        private List<Producto> Productoes;
+        //private Producto<Produc> _PaginadorCustomers;
+        
+            // GET: Productoes
+        public ActionResult Index(string buscar, int pagina = 1)
+        {
+            //Productoes = FinalContext.Productoes.ToList();
+            if (!string.IsNullOrEmpty(buscar))
+            {
+                foreach (var item in buscar.Split(new char[] { ' ' },
+                       StringSplitOptions.RemoveEmptyEntries))
+                {
+                    var abc = from a in db.Producto
+                              where a.Nombre == buscar
+                              select a;
+                }
+            }
+            return View(db.Producto.ToList());
+        }
 
-        // GET: Productoes
-        public ActionResult Index()
-        {
-            return View(db.Productoes.ToList());
-        }
-        public ActionResult Imprimir()
-        {
-            var print = new ActionAsPdf("Index");
-            return print;
-        }
+      
+            public ActionResult Imprimir()
+            {
+                  var print = new ActionAsPdf("Index");
+                    return print;
+            }
 
         // GET: Productoes/Details/5
         public ActionResult Details(int? id)
@@ -33,7 +49,7 @@ namespace Final2.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Producto producto = db.Productoes.Find(id);
+            Producto producto = db.Producto.Find(id);
             if (producto == null)
             {
                 return HttpNotFound();
@@ -56,7 +72,7 @@ namespace Final2.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Productoes.Add(producto);
+                db.Producto.Add(producto);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -71,7 +87,7 @@ namespace Final2.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Producto producto = db.Productoes.Find(id);
+            Producto producto = db.Producto.Find(id);
             if (producto == null)
             {
                 return HttpNotFound();
@@ -102,7 +118,7 @@ namespace Final2.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Producto producto = db.Productoes.Find(id);
+            Producto producto = db.Producto.Find(id);
             if (producto == null)
             {
                 return HttpNotFound();
@@ -115,8 +131,8 @@ namespace Final2.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Producto producto = db.Productoes.Find(id);
-            db.Productoes.Remove(producto);
+            Producto producto = db.Producto.Find(id);
+            db.Producto.Remove(producto);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

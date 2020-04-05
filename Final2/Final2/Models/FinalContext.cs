@@ -12,9 +12,10 @@ namespace Final2.Models
         public FinalContext()
             : base("Cadena1")
         { }
-        
-        
-        public DbSet<Producto> Productoes { get; set; }
+
+        public static object Productoes { get; internal set; }
+
+        public DbSet<Producto> Producto { get; set; }
         public DbSet<Proveedor> Proveedors { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
         //public DbSet<ProductoProveedor> ProductoProveedors{ get; set; }

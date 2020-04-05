@@ -164,6 +164,7 @@ C:\Users\araid\Documents\GitHub\Final\Final2\Final2\bin\Microsoft.Extensions.Opt
 C:\Users\araid\Documents\GitHub\Final\Final2\Final2\bin\Microsoft.Extensions.Primitives.dll
 C:\Users\araid\Documents\GitHub\Final\Final2\Final2\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\araid\Documents\GitHub\Final\Final2\Final2\bin\Newtonsoft.Json.dll
+C:\Users\araid\Documents\GitHub\Final\Final2\Final2\bin\Rotativa.dll
 C:\Users\araid\Documents\GitHub\Final\Final2\Final2\bin\System.Buffers.dll
 C:\Users\araid\Documents\GitHub\Final\Final2\Final2\bin\System.Collections.Immutable.dll
 C:\Users\araid\Documents\GitHub\Final\Final2\Final2\bin\System.ComponentModel.Annotations.dll
@@ -225,5 +226,4 @@ C:\Users\araid\Documents\GitHub\Final\Final2\Final2\obj\Debug\Final2.csproj.Core
 C:\Users\araid\Documents\GitHub\Final\Final2\Final2\obj\Debug\Final2.csproj.CopyComplete
 C:\Users\araid\Documents\GitHub\Final\Final2\Final2\obj\Debug\Final2.dll
 C:\Users\araid\Documents\GitHub\Final\Final2\Final2\obj\Debug\Final2.pdb
-C:\Users\araid\Documents\GitHub\Final\Final2\Final2\bin\Rotativa.dll
 C:\Users\araid\Documents\GitHub\Final\Final2\Final2\obj\Debug\Final2.csprojAssemblyReference.cache

@@ -6,6 +6,20 @@
 
 <h2>Index</h2>
 
+
+<div class="text-right form-inline">
+    <form method="get" action=@Url.Action("Index", "Productoes" )>
+        <div class="form-group">
+            @Html.TextBox("Buscar", null, new { placeholder = "Nombre del producto",
+                                    @class = "form-control" })
+        </div>
+        <button class="btn btn-default" type="submit">Buscar</button>
+    </form>
+</div>
+
+
+
+
 <p>
     @Html.ActionLink("Create New", "Create")
     @Html.ActionLink("Print", "Imprimir")

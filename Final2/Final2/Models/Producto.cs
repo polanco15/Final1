@@ -10,8 +10,8 @@ namespace Final2.Models
         public int Id { get; set; }
         public string Nombre { get; set; }
         public Decimal Precio { get; set; }
+        public string BusquedaActual { get; set; }
 
-        
     }
     //public class ProductoProveedor
     //{
